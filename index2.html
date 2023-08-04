@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Resume Generator</title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container" id="cv-form">
+      <h1 class="text-center my-2">Resume Generator</h1>
+
+      <p class="text-center my-2 mb-3">Let's Build Resume</p>
+
+      <div class="row">
+        <div class="col-md-6">
+          <!-- col-md-6 ka matlab hai 1 column with 6 rows so it is for first column  -->
+          <h3 class="head mx-4">Personal Information</h3>
+          <div class="form mt-2 mx-4">
+            <!-- Name  -->
+
+            <label for="namefield">Your Name</label>
+            <input
+              type="text"
+              id="namefield"
+              class="form-control"
+              placeholder="Enter Your Name"
+            />
+          </div>
+          <div class="form mt-2 mx-4">
+            <!-- mt-2 means margin top  -->
+
+            <!-- Email  -->
+            <label for="Mailid">E-Mail</label>
+            <input
+              type="email"
+              id="mailfield"
+              class="form-control"
+              placeholder="Email-Id"
+            />
+          </div>
+
+          <div class="form mt-2 mx-4">
+            <!-- mt-2 means margin top  -->
+
+            <!-- Contact -->
+            <label for="contactfield">Your Contact No.</label>
+            <input
+              type="text"
+              id="contactfield"
+              class="form-control"
+              placeholder="Contact No."
+            />
+          </div>
+          <div class="form mt-2 mx-4">
+            <!-- mt-2 means margin top  -->
+            <!-- address  -->
+            <label for="addressfield">Your Address</label>
+            <textarea
+              id="addressfield"
+              class="form-control"
+              placeholder="Enter Your Address"
+              rows="4"
+            >
+            </textarea>
+          </div>
+          <div class="form mt-2 mx-4">
+            <!-- mt-2 means margin top  -->
+
+            <!-- Hobbies  -->
+            <label for="Hobbyfield">Your Hobbies</label>
+            <textarea
+              id="Hobbyfield"
+              class="form-control"
+              placeholder="Enter Here"
+              rows="2"
+            ></textarea>
+          </div>
+          <div class="form mt-2 mx-4">
+            <!-- mt-2 means margin top  -->
+
+            <!-- Languages  -->
+            <label for="Languagesfield">Languages</label>
+            <textarea
+              id="Languagesfield"
+              class="form-control"
+              placeholder="Enter Here"
+              rows="2"
+            >
+            </textarea>
+          </div>
+
+          <div class="form mt-2 mx-4" id="skills">
+            <!-- mt-2 means margin top  -->
+
+            <!-- Skills  -->
+            <label for="">Skills</label>
+            <input
+              type="text"
+              id="skillsfield"
+              class="form-control"
+              placeholder="Enter Here"
+            />
+          </div>
+
+          <p class="text-secondary my-2 mx-4">Important Links</p>
+          <div class="form mt-2 mx-4">
+            <!-- mt-2 means margin top  -->
+            <label for="facebook">Facebook Link</label>
+            <input
+              type="text"
+              id="fbfield"
+              class="form-control"
+              placeholder="Facebook Link"
+            />
+          </div>
+          <div class="form mt-2 mx-4">
+            <!-- mt-2 means margin top  -->
+            <label for="instafield">Instagram</label>
+            <input
+              type="text"
+              id="instafield"
+              class="form-control"
+              placeholder="Instagram Link"
+            />
+          </div>
+
+          <div class="form mt-2 mx-4">
+            <!-- mt-2 means margin top  -->
+            <label for="LinkedIN">LinkedIN</label>
+            <input
+              type="text"
+              id="LinkedINfield"
+              class="form-control"
+              placeholder="LinkedIN Link"
+            />
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <!-- it is for column 2  -->
+          <h3 class="head mx-4">Professional Information</h3>
+
+          <!-- objective  -->
+          <div class="form mt-2 mx-4">
+            <!-- mt-2 means margin top  -->
+            <label for="">Objective</label>
+            <textarea
+              class="form-control"
+              placeholder="Enter Here"
+              id="objectivefield"
+            ></textarea>
+          </div>
+
+          <!-- WORK EXPERIENCE  -->
+
+          <div class="form mt-2 mx-4" id="we">
+            <!-- mt-2 means margin top  -->
+            <label for="">Work Experience</label>
+            <textarea
+              class="form-control weField"
+              placeholder="Enter Here"
+              rows="3"
+            ></textarea>
+
+            <div class="container text-center mt-2" id="weAddButton">
+              <!-- btn-sm means button small  -->
+              <button onclick="addNewweField()" class="btn btn-primary btn-sm">
+                Add
+              </button>
+            </div>
+          </div>
+
+          <!-- Projects  -->
+
+          <div class="form mt-2 mx-4" id="we">
+            <!-- mt-2 means margin top  -->
+            <label for="">Projects</label>
+            <textarea
+              class="form-control proField"
+              placeholder="Enter Here"
+              rows="3"
+            ></textarea>
+
+            <div class="container text-center mt-2" id="weAddButton">
+              <!-- btn-sm means button small  -->
+              <button onclick="addNewweField()" class="btn btn-primary btn-sm">
+                Add
+              </button>
+            </div>
+          </div>
+
+          <!-- ACADEMICS QUALIFIACTION  -->
+
+          <div class="form mt-2 mx-4" id="aq">
+            <!-- mt-2 means margin top  -->
+            <label for="">Academics Qualification</label>
+            <textarea
+              class="form-control aqField"
+              placeholder="Enter Here"
+              rows="3"
+            ></textarea>
+
+            <div class="container text-center mt-2" id="aqAddButton">
+              <!-- btn-sm means button small  -->
+              <button onclick="addNewaqField()" class="btn btn-primary btn-sm">
+                Add
+              </button>
+            </div>
+          </div>
+
+          <!-- SKILLS  -->
+
+          <div class="form mt-2 mx-4" id="skills">
+            <!-- mt-2 means margin top  -->
+            <label for="">Skills</label>
+            <input
+              type="text"
+              id="skillsfield"
+              class="form-control sField"
+              placeholder="Enter Here"
+            />
+
+            <div class="container text-center mt-2" id="skAddButton">
+              <!-- btn-sm means button small  -->
+              <button onclick="addNewskField()" class="btn btn-primary btn-sm">
+                Add
+              </button>
+            </div>
+          </div>
+
+          <!-- CERTIFICATION  -->
+
+          <div class="form mt-2 mx-4" id="certi">
+            <!-- mt-2 means margin top  -->
+            <label for="">Certification</label>
+            <textarea
+              class="form-control cField"
+              placeholder="Enter Here"
+              rows="3"
+            ></textarea>
+
+            <div class="container text-center mt-2" id="cAddButton">
+              <!-- btn-sm means button small  -->
+              <button onclick="addNewcField()" class="btn btn-primary btn-sm">
+                Add
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container text-center mt-2">
+        <button onclick="generatecv()" class="btn btn-primary btn-lg">
+          Generate CV
+        </button>
+      </div>
+    </div>
+
+    <!-- ------cv Template -------  -->
+    <div class="container mt-3" id="cv-template">
+      <div class="row">
+        <div class="col-md-4 py-2 background text-center">
+          <!-- first col of 25% around width  -->
+          <img src="defaprofile.png" alt="" class="img-fluid myimg mt-2" />
+          <div class="container">
+            <p class="mt-2" id="nameT">Garima Dhingra</p>
+            <p id="mailT">07garimadhingra@gmail.com</p>
+            <p id="contactT">+91 8097685941</p>
+            <p id="addT">5423, Sector 90 Faridabad , Haryana</p>
+
+            <hr />
+
+            <!-- Your Hobbies  -->
+            <div
+              class="cont mt-3 mb-3"
+              id="hobbiesT"
+              style="text-decoration: none"
+            >
+              <h4>HOBBIES</h4>
+              <ul>
+                <li>Coding</li>
+                <li>Travelling</li>
+                <li>Cooking</li>
+                <li>Listening Music</li>
+              </ul>
+            </div>
+            <hr />
+
+            <!-- your languages  -->
+
+            <div>
+              <h4>Languages</h4>
+              <ul>
+                <li>Hindi</li>
+                <li>English</li>
+                <li>Punjabi</li>
+                <li>Turkish</li>
+              </ul>
+            </div>
+            <hr />
+
+            <!-- skills  -->
+
+            <div>
+              <h4>Skills</h4>
+              <ul>
+                <li>C++</li>
+                <li>DSA</li>
+                <li>Web Development</li>
+                <li>Open CV</li>
+                <li>DBMS(Database Management System)</li>
+                <li>OS(Operating system)</li>
+                <li>CN(Computer Networks)</li>
+                <li>SOEN(Software Enginerring)</li>
+                <li>Robotics</li>
+                <li>Arduino</li>
+                <li>Node MCU</li>
+                <li>Machine Learning</li>
+                <li>Adobe Photoshop</li>
+              </ul>
+            </div>
+
+            <hr />
+
+            <!-- Instagram link  -->
+
+            <h4>FACEBOOK</h4>
+            <p><a id="fbT" href="#1">https://www.google.com</a></p>
+            <h4>INSTAGRAM</h4>
+            <p>
+              <a id="instaT" href="#2"
+                >https://instagram.com/_garima_dhingra?igshid=OGQ5ZDc2ODk2ZA==</a
+              >
+            </p>
+            <h4>LINKEDIN</h4>
+
+            <p>
+              <a id="linkedinT" href="#3"
+                >https://www.linkedin.com/in/garima-dhingra-33041121b</a
+              >
+            </p>
+          </div>
+        </div>
+        <div class="col-md-8">
+          <!-- second col of around 75% around width  -->
+          <h1 id="nameT2" class="text-center py-3" style="font-weight: 1000">
+            Garima Dhingra
+          </h1>
+
+          <!-- Objective card -->
+
+          <div class="card mt-4">
+            <div class="card-header background">
+              <h3>Objective</h3>
+            </div>
+            <div class="card-body">
+              <p id="objectiveT">
+                Hello Everyone , Myself Garima Dhingra looking for Software
+                Developer Role. To apply my software development skills in a
+                challenging environment, contributing to the creation of
+                innovative solutions. Seeking opportunities to collaborate with
+                a skilled team, continuously grow my technical expertise, and
+                deliver high-quality software that exceeds user expectations
+                while making a positive impact in the industry.
+              </p>
+            </div>
+          </div>
+
+          <!-- work experience  -->
+
+          <div class="card mt-4">
+            <div class="card-header background">
+              <h3>Work -Experience</h3>
+            </div>
+            <div class="card-body">
+              <ul id="weT">
+                <li>
+                  Member of Microbird-The Techno club from 31st-Janurary-2021 to
+                  28th-May-2022
+                </li>
+                <li>
+                  Joint-Secretary of Microbird-The Techno Club From
+                  28th-May-2022 to 11th-June-2023
+                </li>
+                <li>
+                  Secretary of Microbird-The Techno Club From 11th-June-2023 To
+                  Till Now
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Projects  -->
+          <div class="card mt-4">
+            <div class="card-header background">
+              <h3>Projects</h3>
+            </div>
+            <div id="projectsT" class="card-body">
+              <h4>Bright IQ</h4>
+              <p id="proT">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime
+                amet reiciendis mollitia possimus reprehenderit atque doloribus?
+                Ipsam quaerat itaque corporis cum alias. Nam, veritatis commodi.
+              </p>
+            </div>
+            <div id="projectsT" class="card-body">
+              <h4>Surveillance Bot</h4>
+              <p id="proT">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime
+                amet reiciendis mollitia possimus reprehenderit atque doloribus?
+                Ipsam quaerat itaque corporis cum alias. Nam, veritatis commodi.
+              </p>
+            </div>
+            <div id="projectsT" class="card-body">
+              <h4>Resume Maker</h4>
+              <p id="proT">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime
+                amet reiciendis mollitia possimus reprehenderit atque doloribus?
+                Ipsam quaerat itaque corporis cum alias. Nam, veritatis commodi.
+              </p>
+            </div>
+            <div id="projectsT" class="card-body">
+              <h4>RGB Sprint</h4>
+              <p id="proT">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime
+                amet reiciendis mollitia possimus reprehenderit atque doloribus?
+                Ipsam quaerat itaque corporis cum alias. Nam, veritatis commodi.
+              </p>
+            </div>
+            <div id="projectsT" class="card-body">
+              <h4>Static Educational Website</h4>
+              <p id="proT">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime
+                amet reiciendis mollitia possimus reprehenderit atque doloribus?
+                Ipsam quaerat itaque corporis cum alias. Nam, veritatis commodi.
+              </p>
+            </div>
+          </div>
+
+          <!-- academic qualifiaction  -->
+
+          <div class="card mt-4">
+            <div class="card-header background">
+              <h3>Academic-Qualification</h3>
+            </div>
+            <div class="card-body">
+              <ul id="aqT1">
+                <li>
+                  <span class="tenthm text-center">10th</span><br /><span
+                    class="tenth mx-4"
+                    >SCHOOL :-</span
+                  >Vidya Anand Public School. <br />
+                  <span class="tenth mx-4">PERCENTAGE :-</span> 90%
+                </li>
+                <li>
+                  <span class="tenthm text-center">12th</span><br /><span
+                    class="tenth mx-4"
+                    >SCHOOL :-</span
+                  >Vidya Anand Public School. <br />
+                  <span class="tenth mx-4">PERCENTAGE :-</span> 91.4%
+                </li>
+                <li>
+                  <span class="tenthm text-center">B.Tech</span><br /><span
+                    class="tenth mx-4"
+                    >COLLEGE :-</span
+                  >J.C. Bose University Of Science And Technology <br />
+                  <span class="tenth mx-4">CGPA :- </span> 8.75
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Certification  -->
+
+          <div class="card mt-4">
+            <div class="card-header background">
+              <h3>Certification</h3>
+            </div>
+            <div id="certiT" class="card-body mt-3">
+              <h4>Pragyan</h4>
+              <h6>J.C. Bose University Of Science And Technology</h6>
+              <p>
+                Pragyan is National level Competition organised by Microbird-The
+                Techno Club of YMCA in which me along with the my team of 2
+                member have submitted 3 projects and stood 1st for making
+                Surveillance Bot which hardware-cum-Software Project.
+              </p>
+            </div>
+            <div id="certiT" class="card-body mt-3">
+              <h4>PCB WAR</h4>
+              <h6>J.C. Bose University Of Science And Technology</h6>
+              <p>
+                Pcb War is InterUniversity Competition for Fabrication of
+                printed circuit board (PCB) . I have qualified this Competition
+              </p>
+            </div>
+
+            <div id="certiT" class="card-body mt-3">
+              <h4>Engineer's Day</h4>
+              <h6>J.C. Bose University Of Science And Technology</h6>
+              <p>
+                On the Ocassion OF Engineer's Day , our college organised a
+                Technical Competition in which we have shown the Surveillance
+                Bot.
+              </p>
+            </div>
+
+            <div id="certiT" class="card-body mt-3">
+              <h4>Machine Learning</h4>
+              <h6>Mooc</h6>
+              <p>
+                Our College has a scheme of giving 4 Mooc certifiaction exam in
+                which i opt machine learning as my Mooc exam and has cleared it
+                .
+              </p>
+            </div>
+            <div id="certiT" class="card-body mt-3">
+              <h4>Project Innovation</h4>
+              <h6>Aravali Institute Of Technology</h6>
+              <p>
+                Aravali College has organsised a national level Competition
+                under gfg (Geeks for Geeks) in which me along with my team
+                participated under Porject Innovation category and stood 1st and
+                won a cash price of 10k.
+              </p>
+            </div>
+            <div id="certiT" class="card-body mt-3">
+              <h4>Workshop On Arduino UNO</h4>
+              <h6>Ramunujan College , DU</h6>
+              <p>
+                Recently, Being the Secretary of Microbird club we got a mesage
+                from Ramunujan College for taking session on Arduino UNO.
+              </p>
+            </div>
+          </div>
+
+          <div class="conatiner mt-3 text-center py-3">
+            <button onclick="printcv()" class="btn background">Print Cv</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="script.js"></script>
+  </body>
+</html>

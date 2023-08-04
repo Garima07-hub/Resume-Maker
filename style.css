@@ -1,0 +1,30 @@
+/* #cv-form{
+    /* display: none; 
+} */
+
+#cv-template{
+    display: none;
+}
+.myimg{
+    width: 200px;
+    /* border: 2px solid red; */
+    border-radius: 50%;
+
+
+}
+
+.background{
+    background-color: rgb(186, 208, 248);
+    color: darkblue;
+    /* margin: 1px; */
+}
+
+.tenthm{
+    font-weight: bold;
+    color: rgb(248, 142, 85);
+}
+
+.tenth{
+    font-weight: 250px;
+    color: rgb(248, 142, 85);
+}
